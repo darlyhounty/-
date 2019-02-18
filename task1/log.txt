@@ -2,7 +2,7 @@ commit 40a58e92b842086fdf1e098011be876370e8bd20
 Author: xuziyang <darlyhounty@gmail.com>
 Date:   Mon Feb 18 20:14:24 2019 +0300
 
-    add task1/status1.txt
+    add task1/status.txt
 
 commit 9d6c70dda496f742232567857e30ff2067355201
 Author: xuziyang <darlyhounty@gmail.com>
