@@ -9,15 +9,3 @@ Author: xuziyang <darlyhounty@gmail.com>
 Date:   Mon Feb 18 20:10:31 2019 +0300
 
     add .gitignore
-
-commit c5072996f2bb1dc8b5813b7a54db6f4cab9c42fd
-Author: darlyhounty <darlyhounty@gmail.com>
-Date:   Mon Feb 18 19:31:46 2019 +0300
-
-    add .gitignore
-
-commit 97b316b86248d7399277bd097951a6e5bb37e986
-Author: darlyhounty <darlyhounty@gmail.com>
-Date:   Mon Feb 18 19:27:04 2019 +0300
-
-    add .gitignore
