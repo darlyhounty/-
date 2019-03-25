@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="main.css">
+ </head>
+ <style type="text/css">
+	.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.toolbar {
+    text-align: center;
+}
+
+#notes {
+    max-height: 250px;
+    overflow: auto;
+}
+
+.note {
+    background: #FF441B13;
+    margin: 5px;
+    padding: 5px;
+    border: gray 1px solid;
+    border-radius: 5px;
+}
+.note > .content {
+    margin-bottom: 5px;
+}
+.note > .date {
+    text-align: right;
+    border-top: gray 1px solid;
+}
+	 .clearfix:after
+{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+ul
+{
+    margin: 0;
+}
+
+header
+{
+    background: rgba(0,0,0,0.4);
+}
+
+
+nav{
+    background: transparent;
+    height: 50px;
+}
+#banner{
+    background: transparent;
+    height: 700px;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    float: right;
+}
+
+nav ul li, nav .logo
+{
+    display: inline-block;
+    line-height: 50px;
+    margin: 5px;
+}
+
+nav ul li a{
+    line-height: 50px;
+    text-decoration: none;
+    display: inline-block;
+    height: inherit;
+    color: #fff;
+}
+
+nav ul li.logo{
+    float: left;
+    padding: 10px;
+}
+
+#banner .inner
+{
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 160px;
+}
+
+#banner .inner h1
+{
+    margin: 0;
+    color: #fff;
+}
+
+button
+{
+    border: none;
+    background: #089DB0;
+    color: #eee;
+}
+
+#banner button
+{
+    padding: 14px 60px;
+}
+
+#banner .inner .more
+{
+    margin-top: 280px;
+    color: #fff;
+}
+
+.sub-heading
+{
+    line-height: 30px;
+    margin: 30px 0;
+    color: #fff;
+}
+
+.logo
+{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo a
+{
+    color: #fff;
+}
+
+h2
+{
+    font-size: 30px;
+}
+
+h3
+{
+    font-size: 24px;
+}
+
+p
+{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.hr
+{
+    width: 100%;
+    height: 2px;
+    margin: 0 auto;
+    margin: 20px auto;
+}
+
+.sub-heading
+{
+    font-size: 18px;
+}
+
+#main-btn
+{
+    padding: 14px 28px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    border-collapse: 6px;
+    background: #18a;
+}
+
+.green-section
+{
+    background: #089DB0;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+.green-section .hr
+{
+    background: #079494;
+    width: 60%;
+}
+
+.green-section .icon-group .icon
+{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 1px solid  #0D6F7C;
+    transform: rotate(45deg);
+    margin: 30px;
+}
+
+.icon-group
+{
+    margin-top: 60px;
+}
+
+.wrapper
+{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.gray-section
+{
+    background: #252F34;
+    color: #fff;
+}
+
+.gray-section .img-section
+{
+    width: 45%;
+    margin: 0;
+}
+
+.img-section img
+{
+    width: 100%
+}
+
+.gray-section .text-section
+{
+    width: 55%;
+}
+
+.article-preview > div
+{
+    float: left;
+    font-size: 0;
+}
+
+.article-preview:nth-child(odd)
+{
+    background-color: rgba(255,255,255,0.05);
+}
+
+.article-preview:after
+{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.text-section
+{
+    position: relative;
+    top: 68px;
+    left: 50px;
+}
+
+.text-section h2
+{
+    margin-bottom: 20px;
+}
+
+.text-section .sub-heading
+{
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.text-section p
+{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.text-section > *{
+    max-width: 90%;
+}
+
+.purple-section
+{
+    padding: 80px;
+    background: #3F3965;
+    color: #fff;
+}
+
+.purple-section .heading-wrapper
+{
+    text-align: center;
+}
+
+.purple-section .hr
+{
+    background: #373259;
+    width: 100%;
+}
+
+.card
+{
+    float: left;
+    width: 50%;
+    min-height: 300px;
+    padding: 50px;
+    -webkit-box-sizing:border-box;
+    -mon-box-sizing:border-box;
+    box-sizing:border-box;
+    /*border: 1px solid white;*/
+}
+
+.card:first-child
+{
+    background: rgba(0,0,0,0.04);
+}
+
+.card:nth-child(2)
+{
+    background: rgba(0,0,0,0.08);
+}
+
+.card:nth-child(3)
+{
+    background: rgba(0,0,0,0.12);
+}
+
+.card:nth-child(4)
+{
+    background: rgba(0,0,0,0.16);
+}
+
+.card:nth-child(5)
+{
+    background: rgba(0,0,0,0.20);
+}
+
+.card:nth-child(6)
+{
+    background: rgba(0,0,0,0.24);
+}
+
+
+footer
+{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    min-height: 200px
+
+}
+
+ul.share-group
+{
+    display: block;
+    width: 1080px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.share-group li
+{
+    display: inline-block;
+    padding: 10px;
+}
+
+.copy
+{
+    padding-bottom: 30px;
+}
+
+.main-wrapper
+{
+    background: #444 url(img/icon04.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+ </style>
+ <body>
+    <div class="main-wrapper">
+    <header>
+        <nav>
+             <li class="logo"><a href="#">BSU</a></li>
+            <ul>
+                <li><a href="#" class="active"></a></li>
+                <li><a href="https://github.com/darlyhounty/-">Github</a></li>
+                <li><a href="https://vk.com">Vk</a></li>
+                <li><a href="https://sites.google.com/site/famcsbsu/labs/up/lectures">books</a></li>
+            </ul> 
+        </nav>
+        <div id="banner">
+            <div class="inner">
+                <h1>В Г У</h1>
+                <p class="sub-heading">Ф П М И</p>
+                 <button class="main-btn">know more</button>
+                 <!-- <div class="more">
+                    更多
+                 </div> -->
+            </div>
+        </div>
+    </header>
+
+    <div class="content"><!--内容开始-->
+        <section class="green-section">
+            <div class="wrapper">
+                <div>
+                    <h2>WHY MARS?</h2>
+                    <div class="hr"></div>
+                    <p class="sub-heading">There are several strategic, practical and scientific reasons for humans to explore Mars. Among them we know that Mars is the most accessible place in the solar system. Additionally, exploring Mars provides the opportunity to possibly answer origin and evolution of life questions, and could someday be a destination for survival of humankind.
+
+In the strategic sense, exploring Mars demonstrates our political and economic leadership as a nation, improves the quality of life on Earth, helps us learn about our home planet, and expands US leadership in the peaceful, international exploration of space.</p>
+                </div>
+                <div class="icon-group">
+                    <span class="icon">item1</span>
+                    <span class="icon">item2</span>
+                    <span class="icon">item3</span>
+                </div>
+            </div>
+        </section>
+        <section class="gray-section">
+
+            <div class="article-preview">
+            <div class="img-section">
+                    <img src="img/1112.jpg" alt=""></div>
+                <div class="text-section">
+<h2>Mars Facts</h2>
+                    <div class="sub-heading">~~~~</div>
+                    <p>Mars is no place for the faint-hearted. Arid, rocky, cold and apparently lifeless, the Red Planet offers few hospitalities. Fans of extreme sports can rejoice, however, for the Red Planet will challenge even the hardiest souls among us. Home to the largest volcano in the solar system, the deepest canyon and crazy weather and temperature patterns.</p>
+                </div>
+
+                </div>
+
+            <div class="article-preview">
+
+                <div class="text-section">
+                    <h2>Geology</h2>
+                    <div class="sub-heading">Rocks and Minerals</div>
+                    <p>On Mars and in meteorites from Mars, we see a variety of rock types: igneous basalt, sedimentary sandstone, mudstone, impactites, evaporites. These rocks are composed of minerals such as olivine, pyroxene, amphiboles, feldspar, carbonates, sulfates (jarosite, gypsum), silica, phyllosilicates, phosphates, and iron oxides (hematite).</p>
+                </div>
+
+                <div class="img-section">
+                    <img src="img/1111.jpg" alt="">
+                </div>
+
+            </div>
+
+            <div class="article-preview">
+                <div class="img-section">
+                    <img src="img/5.jpg" alt="">
+                </div>	
+                <div class="text-section">
+                    <h2>THE PLANET</h2>
+                    <div class="sub-heading">Mars in the Night Sky</div>
+                    <p>Like all the planets in our solar system, Earth and Mars orbit the sun. But Earth is closer to the sun, and therefore races along its orbit more quickly. Earth makes two trips around the sun in about the same amount of time that Mars takes to make one trip. So sometimes the two planets are on opposite sides of the sun, very far apart, and other times, Earth catches up with its neighbor and passes relatively close to it.</p>
+				</div>
+            </div>
+        </section>
+        <section class="purple-section">
+        <div class="wrapper">
+            <div class="heading-wrspper">
+                <h2>TECHNOLOGIES</h2>
+                <div class="hr"></div>
+                <div class="sub-heading">The Mars Exploration Program invests in its own Mars-relevant technologies, as well as staying abreast of complementary innovations across NASA and the Aerospace industry. Technology investments unique to Mars include:
+                </div>
+            </div>
+            <div class="card-group
+            clearfix">
+                <div class="card">
+                    <h3> Mars Ascent Vehicle:</h3>
+                    <p> An essential element if NASA is ever to return materials (or people) from Mars, NASA’s Mars Exploration Program is currently investing in propulsion & guidance technology that could survive the trip to Mars and its harsh surface environments before being launched back into space. Hybrid rocket motors using paraffin fuel burned with liquid oxides of nitrogen are especially promising for this application. Within the thin Mars atmosphere, aerodynamic controls such as fins will not be effective, so investments are also being made in Liquid Injection Thrust Vector Control (LITVC). Using small ports to inject liquid oxidizer directly into the nozzle at different points, the direction of the MAV can be controlled quickly and effectively with no moving parts, even in the thin atmosphere on Mars.</p>
+                </div>
+                <div class="card">
+                    <h3>Planetary Protection Technologies:</h3>
+                    <p>NASA’s Mars Exploration Program is also investing in technologies to enable the safe transport of materials from Mars to Earth (e.g., technologies for containing samples and sample containers for Mars materials, as well as technologies for sterilizing the outsides of these containers). Although it is not known whether or not life ever existed on Mars, concept studies for returning Martian material are conducted under safety standards that are as high as, or higher than, standards used for transporting known  hazardous material on Earth. Technologies currently under investigation include in-space sterilization approaches (e.g., localized heat sterilization and plasma sterilization), as well as sealing technologies (e.g., in-space metal brazing and explosive welding).</p>
+                </div>
+            </div>
+
+            <div class="card-group
+            clearfix">
+                <div class="card">
+                    <h3>From Robots to Humans</h3>
+                    <p>
+						The science and technology developed through the Mars Exploration Program will enable humans to one day explore the Red Planet.
+					</p>
+					</div>
+                <div class="card">
+                    <h3>ORGANIZATION</h3>
+                    <p>Scientific discoveries by one mission can drive the formulation of the scientific focus of future missions. Acquired data provides crucial information for the execution of future missions. For example, orbiter missions provide data for characterizing and certifying candidate landing sites for future missions, while landed assets provide ground truth and detailed context for orbital remote-sensing results. Scientific observations from landed assets are interpreted and placed into a broader context using research results from other areas of the planet, which help inform our understanding of Mars as a system.</p>
+                </div>
+            </div>
+
+            <div class="card-group
+            clearfix">
+                <div class="card">
+                    <h3>R</h3>
+                    <p>MEP missions develop and demonstrate engineering capability as feed-forward to enable future missions (e.g., entry-descent-landing capabilities).</p>
+                </div>
+                <div class="card">
+                    <h3>E</h3>
+                    <p>MEP orbiters enhance the scientific return of landed missions by serving as telecommunication relays for those missions, enabling significant increases in data return.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div><!--内容结束-->
+    <footer><!--页脚开始-->  
+        <ul class="share-group">
+            <li><a href="https://www.bsu.by/">bsu<span class="white"></span></a></li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+        </ul>
+		<div class="copy">
+            &copy 墨一-2019 darlyhounty
+			</div>
+			   <script src = "js/main.js"></script>
+		<div class="container">
+    <div id="notes">
+        <!--Here will be our notes-->
+
+        <template id="note-template">
+            <article class="note">
+                <div class="content" data-target="content"></div>
+                <div class="date" data-target="date"></div>
+            </article>
+        </template>
+    </div>
+
+    <div class="toolbar">
+        <form id="addItemForm" action="javascript: onAddItem()">
+            <input required name="content" type="text"/>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</div>
+    </footer><!--页脚结束-->
+    </div>
+		   <script src = "js/main.js"></script>
+    </body>
+</html>
